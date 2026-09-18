@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مكتبتك الذكية — مكتبة دبلوم القانون الخاص الرقمية</title>
+<meta name="description" content="مكتبة رقمية ذكية لكتب دبلوم القانون الخاص: ابحث داخل الكتب، تصفح النصوص كاملة، تابع جداول المحاضرات ومواعيد الامتحانات.">
+<link rel="stylesheet" href="assets/css/library.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23c8892e'/%3E%3Cpath d='M8 9c2-1.4 4.5-1.6 7-.6v14c-2.5-1-5-.8-7 .6Z' fill='%23291c12'/%3E%3Cpath d='M24 9c-2-1.4-4.5-1.6-7-.6v14c2.5-1 5-.8 7 .6Z' fill='%233a2817'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5C4 4.1 5.1 3 6.5 3H11v15H6.5A2.5 2.5 0 0 0 4 20.5V5.5Z" fill="#3a2817"/><path d="M20 5.5C20 4.1 18.9 3 17.5 3H13v15h4.5A2.5 2.5 0 0 1 20 20.5V5.5Z" fill="#54381e"/><path d="M11 3h2v15h-2z" fill="#f2d296"/></svg>
+    </span>
+    <span><b id="brand-title">مكتبتك الذكية</b><small>دبلوم القانون الخاص</small></span>
+  </a>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="search.html">البحث</a>
+    <a href="index.html#lectures">جدول المحاضرات</a>
+    <a href="index.html#library">الكتب</a>
+    <a class="nav-cta" href="admin.html">لوحة الإدارة</a>
+  </nav>
+</header>
+
+<!-- ================= البطل ================= -->
+<section class="hero" id="top">
+  <div class="lamp-glow" aria-hidden="true"></div>
+  <div class="beam" aria-hidden="true"></div>
+  <div class="dust" id="dust" aria-hidden="true"></div>
+
+  <div class="crest" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none">
+      <path d="M14 18c0-3.3 2.7-6 6-6h9v40h-9a6 6 0 0 0-6 6V18Z" fill="#2c1e14"/>
+      <path d="M50 18c0-3.3-2.7-6-6-6h-9v40h9a6 6 0 0 1 6 6V18Z" fill="#3a2817"/>
+      <path d="M29 12h6v40h-6z" fill="#f7e7bd"/>
+      <path d="M22 22h4M22 28h4M38 22h4M38 28h4" stroke="#8a6a3d" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="32" cy="12" r="4.5" fill="#ffd98f"/>
+    </svg>
+  </div>
+
+  <h1>مكتبتك الذكية</h1>
+  <p class="sub">ابحث، اقرأ، واكتشف المعرفة داخل كتبك — نصوص الكتب كاملة بين يديك</p>
+  <svg class="ornament" viewBox="0 0 420 24" aria-hidden="true">
+    <g stroke="#b08d57" stroke-width="1.4" fill="none">
+      <path d="M8 12 H182 M238 12 H412" opacity=".8"/>
+      <path d="M196 12 l14 -7 14 7 -14 7 Z" fill="#c8892e" stroke="#8a6a3d"/>
+      <circle cx="188" cy="12" r="2.4" fill="#e6ac4f" stroke="none"/>
+      <circle cx="232" cy="12" r="2.4" fill="#e6ac4f" stroke="none"/>
+    </g>
+  </svg>
+
+  <form class="searchbox" action="search.html" method="get" role="search">
+    <input type="search" name="q" id="hero-q" placeholder="ابحث في مكتبتك أو اسأل عن موضوع… (مثال: عناصر أركان الجريمة — أو 148)" autocomplete="off">
+    <button class="btn btn-amber" type="submit">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="10.5" cy="10.5" r="7"/><path d="m20 20-4.3-4.3" stroke-linecap="round"/></svg>
+      ابحث
+    </button>
+  </form>
+
+  <div class="cta-row">
+    <a class="btn btn-ghost" href="#library">📚 تصفح الكتب</a>
+    <a class="btn btn-ghost" href="search.html">🔎 البحث المتقدم</a>
+  </div>
+
+  <div class="shelfstage" aria-hidden="true">
+    <div class="shelf"></div>
+    <div class="plank"></div>
+  </div>
+</section>
+
+<!-- ================= مواعيد الامتحانات ================= -->
+<section class="sect" id="exams">
+  <div class="sect-head">
+    <div class="kicker">EXAMS</div>
+    <h2>مواعيد الامتحانات</h2>
+    <svg class="ornament" viewBox="0 0 340 20"><g stroke="#b08d57" stroke-width="1.2" fill="none"><path d="M6 10 H140 M200 10 H334" opacity=".7"/><path d="M158 10 l12 -6 12 6 -12 6 Z" fill="#c8892e" stroke="#8a6a3d"/></g></svg>
+  </div>
+  <div id="exams-body"><div class="empty-state">جاري التحميل…</div></div>
+</section>
+
+<!-- ================= جدول المحاضرات ================= -->
+<section class="sect" id="lectures">
+  <div class="sect-head">
+    <div class="kicker">SCHEDULE</div>
+    <h2>جدول المحاضرات</h2>
+    <svg class="ornament" viewBox="0 0 340 20"><g stroke="#b08d57" stroke-width="1.2" fill="none"><path d="M6 10 H140 M200 10 H334" opacity=".7"/><path d="M158 10 l12 -6 12 6 -12 6 Z" fill="#c8892e" stroke="#8a6a3d"/></g></svg>
+  </div>
+  <div id="lectures-body"><div class="empty-state">جاري التحميل…</div></div>
+</section>
+
+<!-- ================= المقررات ================= -->
+<section class="sect" id="courses">
+  <div class="sect-head">
+    <div class="kicker">COURSES</div>
+    <h2>المقررات</h2>
+    <svg class="ornament" viewBox="0 0 340 20"><g stroke="#b08d57" stroke-width="1.2" fill="none"><path d="M6 10 H140 M200 10 H334" opacity=".7"/><path d="M158 10 l12 -6 12 6 -12 6 Z" fill="#c8892e" stroke="#8a6a3d"/></g></svg>
+  </div>
+  <div id="courses-body"><div class="empty-state">جاري التحميل…</div></div>
+</section>
+
+<!-- ================= المكتبة ================= -->
+<section class="sect" id="library">
+  <div class="sect-head">
+    <div class="kicker">THE LIBRARY</div>
+    <h2>كتب المكتبة</h2>
+    <p class="sub2">نصوص الكتب كاملة — اضغط على أي كتاب لتقرأه داخل الموقع بتصميمه الخاص</p>
+  </div>
+  <div id="library-body"><div class="empty-state">جاري التحميل…</div></div>
+</section>
+
+<!-- ================= أسئلة المراجعة بالمادة ================= -->
+<section class="sect" id="quiz">
+  <div class="sect-head">
+    <div class="kicker">QUIZ</div>
+    <h2>أسئلة المراجعة</h2>
+    <p class="sub2">اختر المادة ثم أجب على أسئلة محتوى حقيقية من كتبها</p>
+  </div>
+  <div class="paper-card quiz-card" id="quiz-card">
+    <div class="empty-state">جاري التحميل…</div>
+  </div>
+</section>
+
+<footer>
+  <a class="admin-link" href="admin.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-4Z" stroke-linejoin="round"/><path d="M9.5 12l2 2 3.5-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    لوحة الإدارة
+  </a>
+</footer>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

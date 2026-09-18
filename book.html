@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قارئ الكتاب — مكتبة دبلوم القانون الخاص</title>
+<link rel="stylesheet" href="assets/css/library.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23c8892e'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5C4 4.1 5.1 3 6.5 3H11v15H6.5A2.5 2.5 0 0 0 4 20.5V5.5Z" fill="#3a2817"/><path d="M20 5.5C20 4.1 18.9 3 17.5 3H13v15h4.5A2.5 2.5 0 0 1 20 20.5V5.5Z" fill="#54381e"/><path d="M11 3h2v15h-2z" fill="#f2d296"/></svg>
+    </span>
+    <span><b>مكتبتك الذكية</b><small>قارئ الكتب</small></span>
+  </a>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="search.html">البحث</a>
+    <a href="index.html#library">الكتب</a>
+  </nav>
+</header>
+
+<div class="reader-shell" id="reader-shell">
+
+  <div class="reader-bar" id="reader-bar">
+    <button class="r-btn" id="btn-toc" title="فهرس المحتويات">☰ الفهرس</button>
+    <span class="r-title" id="r-title">جاري تحميل الكتاب…</span>
+
+    <span class="r-ctl">
+      <button id="btn-prev" title="الصفحة السابقة">السابقة ◂</button>
+      <span id="r-page-label">—</span>
+      <button id="btn-next" title="الصفحة التالية">▸ التالية</button>
+    </span>
+
+    <span class="r-ctl">
+      <span>صفحة</span>
+      <input type="number" id="r-goto" min="1" value="1" style="width:70px">
+      <button id="btn-goto">انتقال</button>
+    </span>
+
+    <span class="r-ctl r-search-ctl">
+      <input type="search" id="r-search" placeholder="بحث داخل الكتاب…">
+      <button id="btn-find">بحث</button>
+    </span>
+
+    <span class="r-ctl">
+      <button id="btn-spread" title="التبديل بين صفحة واحدة وصفحتين">📖 صفحة</button>
+      <button id="btn-bookmark" title="حفظ علامة مرجعية">🔖</button>
+      <button id="btn-font-plus" title="تكبير الخط">أ+</button>
+      <button id="btn-font-minus" title="تصغير الخط">أ−</button>
+    </span>
+  </div>
+
+  <div class="progress-track"><i id="r-progress"></i></div>
+
+  <div class="page-stage single" id="page-stage"></div>
+</div>
+
+<!-- فهرس المحتويات -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<aside class="toc-drawer" id="toc-drawer">
+  <button class="r-btn toc-close" id="btn-toc-close">✕ إغلاق</button>
+  <h3>📜 فهرس المحتويات</h3>
+  <div id="toc-list"></div>
+</aside>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/reader.js"></script>
+</body>
+</html>
